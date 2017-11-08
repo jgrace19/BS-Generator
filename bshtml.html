@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>bshtml.html</title>
+    <link rel="stylesheet" href="bscss.css">
+</head>
+<body>
+
+	<script type="text/javascript">
+		var verb = ["deliver","embrace","employ","empower","enable","enhance","redefine","reinvent","rethink","revolutionize","streamline","transform","transition"];
+
+		var adjective = ["best-of-breed","collaborative","efficient","innovative","dynamic","globally-competitive","integrated","laser-like","proactive","leading-edge","legislative","public-private","revolutionary","robust","seamless","secure","sustainable","transparent","visionary","voter-centric","world-class","private sector","non-profit"];
+
+		var noun = ["communities","convergence","infrastructure","initiatives","experiences","partnerships","systems","realities","programs","workforces","policies"];
+
+		function buttonClick(){
+			var verb_index = Math.floor(Math.random() * verb.length);
+			var adjective_index = Math.floor(Math.random() * adjective.length);
+			var noun_index = Math.floor(Math.random() * noun.length);
+
+			document.getElementById("first").innerHTML = verb[verb_index];
+			document.getElementById("second").innerHTML = adjective[adjective_index];
+			document.getElementById("third").innerHTML = noun[noun_index];
+		}	
+
+	</script>
+
+	<button class=generate_button onclick="buttonClick()">Make Policy Bullsh*t!</button>
+
+	<div class="full_string">
+		<p id="first"></p>
+		<p id="second"></p>
+		<p id="third"></p>
+	</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
